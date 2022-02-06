@@ -3,13 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>database-of-things</artifactId>
-    <groupId>it.alessiostalla</groupId>
+    <artifactId>database-of-things-webapp</artifactId>
+    <groupId>it.alessiostalla.databaseofthings</groupId>
     <packaging>war</packaging>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <properties>
-        <portofino.version>5.2.2-SNAPSHOT</portofino.version>
-        <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
+        <portofino.version>5.3.0</portofino.version>
+        <nodejs.version>v16.13.0</nodejs.version>
+        <npm.version>7.5.6</npm.version>
+        <spring.boot.version>2.4.5</spring.boot.version>
         <portofino.application.directory>${serverInfo:realPath}/WEB-INF</portofino.application.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -98,7 +100,7 @@
         <dependency>
             <groupId>com.manydesigns</groupId>
             <artifactId>portofino-mail</artifactId>
-            <version>${project.version}</version>
+            <version>${portofino.version}</version>
             <scope>compile</scope>
         </dependency>
         <!-- javax.mail. Some application servers natively provide it. -->
@@ -303,8 +305,8 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v12.3.1</nodeVersion>
-                                    <npmVersion>6.11.3</npmVersion>
+                                    <nodeVersion>${nodejs.version}</nodeVersion>
+                                    <npmVersion>${npm.version}</npmVersion>
                                 </configuration>
                             </execution>
 
