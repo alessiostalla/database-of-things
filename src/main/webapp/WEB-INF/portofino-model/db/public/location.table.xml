@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="location">
+    <annotations/>
+    <columns>
+        <column columnName="id" columnType="bigserial" length="19" jdbcType="-5" autoincrement="true" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="object_id" columnType="int8" length="19" jdbcType="-5" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="date_from" columnType="timestamptz" jdbcType="93" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="date_to" columnType="timestamptz" jdbcType="93" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+        <column columnName="place" columnType="int8" length="19" jdbcType="-5" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+    </columns>
+    <foreignKeys>
+        <foreignKey toTable="place" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="fk_location_place" toDatabase="db" hql="from place">
+            <references>
+                <reference fromColumn="place" toColumn="id"/>
+            </references>
+        </foreignKey>
+    </foreignKeys>
+    <primaryKey primaryKeyName="location_pkey">
+        <column columnName="id"/>
+    </primaryKey>
+    <selectionProviders/>
+</table>

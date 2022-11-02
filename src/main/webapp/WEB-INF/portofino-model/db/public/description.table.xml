@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="description">
+    <annotations/>
+    <columns>
+        <column columnName="id" columnType="bigserial" length="19" jdbcType="-5" autoincrement="true" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="thing_id" columnType="int8" length="19" jdbcType="-5" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="lang" columnType="varchar" length="8" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="name" columnType="varchar" length="512" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="description" columnType="varchar" length="4096" jdbcType="12" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+    </columns>
+    <foreignKeys/>
+    <primaryKey primaryKeyName="description_pkey">
+        <column columnName="id"/>
+    </primaryKey>
+    <selectionProviders/>
+</table>

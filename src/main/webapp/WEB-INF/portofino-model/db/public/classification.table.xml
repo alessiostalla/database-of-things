@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="classification">
+    <annotations/>
+    <columns>
+        <column columnName="id" columnType="bigserial" length="19" jdbcType="-5" autoincrement="true" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="thing_id" columnType="int8" length="19" jdbcType="-5" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="tag" columnType="varchar" length="32" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+    </columns>
+    <foreignKeys/>
+    <primaryKey primaryKeyName="classification_pkey">
+        <column columnName="id"/>
+    </primaryKey>
+    <selectionProviders/>
+</table>

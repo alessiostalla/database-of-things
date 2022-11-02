@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="book">
+    <annotations/>
+    <columns>
+        <column columnName="id" columnType="int8" length="19" jdbcType="-5" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="author" columnType="varchar" length="256" jdbcType="12" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+        <column columnName="title" columnType="varchar" length="256" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="publisher" columnType="varchar" length="256" jdbcType="12" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+        <column columnName="year" columnType="int4" length="10" jdbcType="4" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+        <column columnName="isbn" columnType="varchar" length="20" jdbcType="12" autoincrement="false" nullable="true">
+            <annotations/>
+        </column>
+    </columns>
+    <foreignKeys/>
+    <primaryKey primaryKeyName="book_pkey">
+        <column columnName="id"/>
+    </primaryKey>
+    <selectionProviders/>
+</table>

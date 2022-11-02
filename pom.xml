@@ -8,7 +8,7 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <portofino.version>5.3.0</portofino.version>
+        <portofino.version>5.3.2</portofino.version>
         <nodejs.version>v16.13.0</nodejs.version>
         <npm.version>7.5.6</npm.version>
         <spring.boot.version>2.4.5</spring.boot.version>

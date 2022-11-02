@@ -5,7 +5,7 @@ import {
   Page, PortofinoComponent, PortofinoService, SidenavService,
   CrudComponent, CustomPageComponent, TextPageComponent,
   UpstairsComponent,
-  PageLayout
+  PageLayout, LOCALES, TRANSLATIONS_EN, TRANSLATIONS_IT, TRANSLATIONS_ES
 } from "portofino";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatButtonModule } from "@angular/material/button";
@@ -40,20 +40,25 @@ import {registerLocaleData} from "@angular/common";
 //Additional translations are welcome!
 import localeEs from "@angular/common/locales/es";
 import localeIt from "@angular/common/locales/it";
+import {EN} from "./i18n/en";
 
 registerLocaleData(localeEs);
 registerLocaleData(localeIt);
 
 @Component({
   selector: 'app-root',
-  template: `<portofino-app appTitle="Portofino Application" apiRoot="http://localhost:8080/api/"></portofino-app>`
+  template: `<portofino-app appTitle="Database of Things" apiRoot="http://localhost:8080/api/"></portofino-app>`
 })
 export class AppComponent {}
 
 @NgModule({
   declarations: [AppComponent],
   providers: [
-    { provide: NOTIFICATION_HANDLERS, useClass: MatSnackBarNotificationService, multi: true }
+    { provide: NOTIFICATION_HANDLERS, useClass: MatSnackBarNotificationService, multi: true },
+    { provide: LOCALES, useValue: [
+        { key: 'en', name: 'English', translations: EN },
+        { key: 'it', name: 'Italiano', translations: TRANSLATIONS_IT },
+        { key: 'es', name: 'Español', translations: TRANSLATIONS_ES }]}
   ],
   imports: [
     RouterModule.forRoot([...PortofinoModule.defaultRoutes()], PortofinoModule.defaultRouterConfig()),
