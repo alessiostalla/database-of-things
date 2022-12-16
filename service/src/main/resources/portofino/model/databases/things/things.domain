@@ -1,0 +1,4 @@
+import com.manydesigns.portofino.database.model.annotations.JDBCConnection;
+
+@JDBCConnection(password = "postgres", username = "postgres", url = "jdbc:postgresql://localhost:5433/database-of-things")
+domain things;

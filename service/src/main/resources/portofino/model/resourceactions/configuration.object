@@ -1,0 +1,25 @@
+import classes.com.manydesigns.portofino.resourceactions.AdditionalChild;
+import classes.com.manydesigns.portofino.resourceactions.Group;
+import classes.com.manydesigns.portofino.resourceactions.Permissions;
+import classes.com.manydesigns.portofino.resourceactions.ResourceActionConfiguration;
+import classes.com.manydesigns.portofino.security.AccessLevel;
+
+object configuration : ResourceActionConfiguration {
+	additionalChildren = [
+		AdditionalChild {
+			path = "res:com/manydesigns/mail/rest/SendMailAction.class"
+			segment = "portofino-send-mail"
+		},
+		AdditionalChild {
+			path = "res:com/manydesigns/portofino/upstairs/actions"
+			segment = "portofino-upstairs"
+		},
+		AdditionalChild {
+			path = "res:com/manydesigns/portofino/resourceactions/login"
+			segment = ":auth"
+		}
+	]
+	permissions = Permissions {
+		groups = []
+	}
+}
