@@ -8,5 +8,5 @@ entity place {
 		id
 	}
 	@Column(autoincrement = false, columnType = "geography", jdbcType = 1111, nullable = true)
-	position
+	position: org.geolatte.geom.Point
 }
