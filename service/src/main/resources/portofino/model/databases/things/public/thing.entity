@@ -1,0 +1,10 @@
+import com.manydesigns.portofino.database.model.annotations.Column;
+import com.manydesigns.portofino.database.model.annotations.Table;
+
+@Table
+entity thing {
+	id {
+		@Column(autoincrement = true, columnType = "bigserial", jdbcType = -5, length = 19, nullable = false)
+		id
+	}
+}

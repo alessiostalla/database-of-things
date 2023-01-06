@@ -1,0 +1,20 @@
+import com.manydesigns.portofino.database.model.annotations.Column;
+import com.manydesigns.portofino.database.model.annotations.Table;
+
+@Table
+entity placement {
+	id {
+		@Column(autoincrement = true, columnType = "bigserial", jdbcType = -5, length = 19, nullable = false)
+		id
+	}
+	@Column(autoincrement = false, columnType = "int8", jdbcType = -5, length = 19, nullable = false)
+	thing
+	@Column(autoincrement = false, columnType = "timestamptz", jdbcType = 93, nullable = false)
+	date_from
+	@Column(autoincrement = false, columnType = "timestamptz", jdbcType = 93, nullable = true)
+	date_to
+	@Column(autoincrement = false, columnType = "int8", jdbcType = -5, length = 19, nullable = true)
+	place
+	fk_placement_thing --> thing(id=thing)
+	fk_placement_place --> place(id=place)
+}

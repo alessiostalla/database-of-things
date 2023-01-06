@@ -1,0 +1,12 @@
+import com.manydesigns.portofino.database.model.annotations.Column;
+import com.manydesigns.portofino.database.model.annotations.Table;
+
+@Table
+entity place {
+	id {
+		@Column(autoincrement = true, columnType = "bigserial", jdbcType = -5, length = 19, nullable = false)
+		id
+	}
+	@Column(autoincrement = false, columnType = "geography", jdbcType = 1111, nullable = true)
+	position
+}
