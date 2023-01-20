@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<action>
-    <additional-child path="res:com/manydesigns/mail/rest/SendMailAction.class" segment="portofino-send-mail"/>
-    <additional-child path="/Users/alessio/projects/database-of-things/target/database-of-things-webapp-1.0-SNAPSHOT/WEB-INF/actions/login" segment=":auth"/>
-    <additional-child path="res:com/manydesigns/portofino/upstairs/actions" segment="portofino-upstairs"/>
-    <permissions>
-        <group level="VIEW" name="all"/>
-    </permissions>
-</action>
