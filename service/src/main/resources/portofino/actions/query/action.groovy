@@ -9,7 +9,7 @@ import com.manydesigns.portofino.security.*
 import javax.ws.rs.*
 
 @RequiresPermissions(level = AccessLevel.VIEW)
-class Welcome extends CustomAction {
+class Query extends CustomAction {
 
     @GET
     String welcomeMessage() {
